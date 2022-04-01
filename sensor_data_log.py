@@ -12,8 +12,7 @@ from influxdb import InfluxDBClient
 host = '127.0.0.1'  # My Ubuntu NUC
 port = 8086  # default port
 
-# user = "rpi" # the user/password created for the pi, with write access
-# password = "rpi"
+user = "rpi" # the user/password created for the pi, with write access
 
 dbname = 'sensor_data'  # the database we created earlier
 interval = 60  # Sample period in seconds
@@ -44,8 +43,7 @@ try:
 
         # Read the sensor using the configured driver and gpio
 
-        (humidity, temperature) = Adafruit_DHT.read_retry(sensor,
-                sensor_gpio)
+        (humidity, temperature) = Adafruit_DHT.read_retry(sensor, sensor_gpio)
 
         # iso = time.ctime()
 
@@ -53,8 +51,7 @@ try:
 
         # Print for debugging, uncomment the below line
 
-        print '[%s] Temp: %s, Humidity: %s' % (utc, temperature,
-                humidity)
+        print '[%s] Temp: %s, Humidity: %s' % (utc, temperature, humidity)
 
         # Create the JSON data structure
 
