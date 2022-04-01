@@ -43,7 +43,7 @@ try:
 
         # Read the sensor using the configured driver and gpio
 
-        (humidity, temperature) = Adafruit_DHT.read_retry(sensor, sensor_gpio)
+        humidity, temperature = Adafruit_DHT.read_retry(sensor, sensor_gpio)
 
         # iso = time.ctime()
 
