@@ -13,7 +13,7 @@ host = '127.0.0.1'  # My Ubuntu NUC
 port = 8086  # default port
 
 user = "rpi" # the user/password created for the pi, with write access
-
+password = "rpi"
 dbname = 'sensor_data'  # the database we created earlier
 interval = 60  # Sample period in seconds
 
