@@ -51,7 +51,7 @@ try:
 
         # Print for debugging, uncomment the below line
 
-        print '[%s] Temp: %s, Humidity: %s' % (utc, temperature, humidity)
+        print("[%s] Temp: %s, Humidity: %s" % (utc_timestamp, temperature, humidity))
 
         # Create the JSON data structure
 
