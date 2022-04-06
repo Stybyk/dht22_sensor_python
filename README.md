@@ -3,6 +3,10 @@ DHT22 python sensor + influxdd
 SENSOR LIBRARY
 https://thepihut.com/blogs/raspberry-pi-tutorials/am2302-temp-humidity-sensor
 
+sudo apt-get update
+sudo apt-get install python3-pip
+sudo python3 -m pip install --upgrade pip setuptools wheel
+
 sudo pip3 install Adafruit_Python_DHT
 
 DATABASE CREATION
