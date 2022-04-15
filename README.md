@@ -25,3 +25,18 @@ CREATE DATABASE sensor_data
 GRANT ALL ON "sensor_data" TO "rpi"
 CREATE USER grafana WITH PASSWORD 'grafana'
 GRANT READ ON "sensor_data" TO "grafana"
+
+
+
+RASPBERRY PI ZERO ISSUE INFLUXDB API NOT AVAILIBLE 
+
+systemctl stop influxdb
+
+# Remove all TSI index files
+rm -r /var/lib/influxdb/data
+
+# Rebuild TSI index files
+su --command "influx_inspect buildtsi -datadir /var/lib/influxdb/data -waldir /var/lib/influxdb/wal" influxdb
+
+# Start InfluxDB again
+systemctl start influxdb
