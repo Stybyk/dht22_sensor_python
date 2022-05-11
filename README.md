@@ -28,15 +28,16 @@ GRANT READ ON "sensor_data" TO "grafana"
 
 
 
-**RASPBERRY PI ZERO ISSUE INFLUXDB API NOT AVAILIBLE** 
+**RASPBERRY PI ZERO ISSUE INFLUXDB API NOT AVAILIBLE EROR - HAPPEN IF RASPBERRY PI START WITHOUT INTERNET AND RANDOM TIME SELECTION CORRUPT DATABASE** 
 
+1)
 systemctl stop influxdb
 
-# Remove all TSI index files
+2) Remove all TSI index files
 rm -r /var/lib/influxdb/data
 
-# Rebuild TSI index files
+3) Rebuild TSI index files
 su --command "influx_inspect buildtsi -datadir /var/lib/influxdb/data -waldir /var/lib/influxdb/wal" influxdb
 
-# Start InfluxDB again
+4) Start InfluxDB again
 systemctl start influxdb
